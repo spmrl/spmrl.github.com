@@ -15,7 +15,7 @@
 /***** Global *****/
 /* Body */
 body {
-    background: #F5F4EF url('../images/bg.png');
+    background: #F2F2F2 url('../images/bg.png');
     color: #000305;
     font-size: 87.5%; /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -52,12 +52,12 @@ hr { border: 2px solid #EEEEEE; }
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
-	color: #C74350;
+	color: #A81F33;
 	padding: 0 1px;
 	text-decoration: underline;
 }
 a:hover, a:active, a.active, .active>a {
-	background-color: #C74350;
+	background-color: #A81F33;
 	color: white;
 	text-decoration: none;
 	text-shadow: 1px 1px 1px #333;
@@ -162,11 +162,11 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 		font-weight: bold;
 		margin: 0 auto .6em auto;
 		text-decoration: none;
-		width: 600px;
+		width: 800px;
 	}
 	#banner h1 a:hover, #banner h1 a:active {
 		background: none;
-		color: #C74350;
+		color: #D90D0D;
 		text-shadow: none;
 	}
 	
@@ -174,7 +174,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	
 	/* Main Nav */
 	#banner nav {
-		background: #000305;
+		background: #3C5973;
 		font-size: 1.143em;
 		height: 40px;
 		line-height: 30px;
@@ -251,7 +251,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 #sidebar li {border-bottom: 1px solid #fff;}
 
 #sidebar h2 {
-	color: #C74350;
+	color: #A81F33;
 	font-size: 1.429em;
 	margin-top: .75em;
 	margin-bottom: .25em;
