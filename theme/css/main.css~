@@ -10,7 +10,7 @@
 /* Imports */
 @import url("reset.css");
 @import url("pygment.css");
-@import url(http://fonts.googleapis.com/css?family=Enriqueta:400,700);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
 
 /***** Global *****/
 /* Body */
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1.1;
 	margin-bottom: .8em;
-    font-family: 'Enriqueta', arial, serif;
+    font-family: 'Yanone Kaffeesatz', arial, serif;
 }
 
 h3, h4, h5, h6 { margin-top: .8em; }
@@ -154,6 +154,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	/* Banner */
 	#banner h1 {
         font-size: 3.571em; 
+        line-height: 0;
 	    margin: 0 auto 0 auto;
     }
 	#banner h1 a:link, #banner h1 a:visited {
@@ -162,7 +163,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 		font-weight: bold;
 		margin: 0 auto .6em auto;
 		text-decoration: none;
-		width: 600px;
+		width: 427px;
 	}
 	#banner h1 a:hover, #banner h1 a:active {
 		background: none;
