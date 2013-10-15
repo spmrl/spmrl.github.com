@@ -62,6 +62,14 @@ In order to ease cross-linguistic comparisons, the data set have also been relea
 </div>
 <div class="section" id="gold-tokens-scenarios">
 <h2>Gold Tokens Scenarios:</h2>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 43)</p>
+<p>Title underline too short.</p>
+<pre class="literal-block">
+Gold Tokens Scenarios:
+~~~~~~~~~~~~~~~~~~~~~
+</pre>
+</div>
 <ul>
 <li><dl class="first docutils">
 <dt>Dependency Structure:</dt>
@@ -82,6 +90,15 @@ In order to ease cross-linguistic comparisons, the data set have also been relea
 </dd>
 </dl>
 </li>
+<li><dl class="first docutils">
+<dt>Multi Word Expressions evaluation:</dt>
+<dd><ul class="first last simple">
+<li>The French data set contains MWEs annotated at the morpho syntactic level. We evaluated them for the dependency track only. (see wiki page <a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=shared_task_description">http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=shared_task_description</a> )</li>
+<li>MWE Evaluator: <a class="reference external" href="http://pauillac.inria.fr/~seddah/do_eval_dep_mwe.pl">http://pauillac.inria.fr/~seddah/do_eval_dep_mwe.pl</a></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div>
 <div class="section" id="predicted-tokens-scenarios">
@@ -92,6 +109,43 @@ In order to ease cross-linguistic comparisons, the data set have also been relea
 <li>We developped a set of wrappers that use MaltParser's reprojectiver (Nivre &amp; Nilsson, 2005). Wrappers are available here <a class="reference external" href="http://pauillac.inria.fr/~seddah/TedWrappers_20131015.tar.gz">http://pauillac.inria.fr/~seddah/TedWrappers_20131015.tar.gz</a></li>
 </ul>
 </blockquote>
+</div>
+<div class="section" id="results">
+<h2>Results</h2>
+</div>
+<div class="section" id="dependency-parsing-track">
+<h2>Dependency Parsing Track</h2>
+<p>We used the same protocol as in Conll 2007 (Nivre et al, 2007) in two settings for 4 scenarios:</p>
+<p>Full train set size ⇒ with gold or predicted morphology (POS tag and features)
+5k sentences train set size ⇒ with gold or predicted morphology (POS tag and features).
+Note that the predicted data were provided as baseline, participants were free to use theirs. The French, Hebrew and Arabic predicted train sets have not been subjected to a cross fold jackniffing so participants were incited to do it (only a few did use their own predicted morphology though: Alpage-IGM and Alpage-Dyalog for French, Cadim for Arabic and IMS_SGZEDED_CIS for all languages.)</p>
+<ul class="simple">
+<li><a class="reference external" href="http://pauillac.inria.fr/~seddah/updated_official.spmrl_results.html">http://pauillac.inria.fr/~seddah/updated_official.spmrl_results.html</a></li>
+<li><a class="reference external" href="http://pauillac.inria.fr/~seddah/updated_official.csv">http://pauillac.inria.fr/~seddah/updated_official.csv</a></li>
+</ul>
+<p>All languages ranking</p>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>1st IMS-SZEGED-CIS
+<a href="#id3"><span class="problematic" id="id4">*</span></a>2nd Alpage-Dyalog
+<a href="#id5"><span class="problematic" id="id6">*</span></a>3rd MaltOptimier</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 85); <em><a href="#id2">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 85); <em><a href="#id4">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 85); <em><a href="#id6">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<p>Constituent Parsing track
+Only IMS-SZEGED-CIS participated, we provide baseline results using the Berkeley Parser (Petrov et al, 2006, 2007)</p>
+<p><a href="#id7"><span class="problematic" id="id8">*</span></a><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_ptb-all.spmrl_results.html">http://pauillac.inria.fr/~seddah/official_ptb-all.spmrl_results.html</a>
+<a href="#id9"><span class="problematic" id="id10">*</span></a><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_ptb-all.csv">http://pauillac.inria.fr/~seddah/official_ptb-all.csv</a></p>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 95); <em><a href="#id8">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 95); <em><a href="#id10">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
 </div>
 <div class="section" id="shared-task-organizers">
 <h2>Shared task Organizers</h2>
@@ -224,7 +278,7 @@ Zhongqiang Huang, Joseph Le Roux, Grzegorz Chrupala.</p>
                         <h2>Categories</h2>
                         <ul>
                            <li ><a href="/category/cfp.html">CfP</a></li>
-                           <li ><a href="/category/misc.html">misc</a></li>
+                           <li ><a href="/category/workshop.html">workshop</a></li>
                         </ul>
                 </div>
                 <div class="widget blogroll">
