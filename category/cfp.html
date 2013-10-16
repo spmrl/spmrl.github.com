@@ -33,7 +33,7 @@
                 <h1 class="entry-title"><a href="/spmrl2013-sharedtask.html">Shared Task</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2013-10-10T00:00:00">
-                Do 10 Oktober 2013
+                Jeu 10 octobre 2013
         </abbr>
 
         <address class="vcard author">
@@ -44,7 +44,7 @@
                 <!-- -*- coding:utf-8 -*- -->
 <p>The fourth SPMRL workshop  hosted the first shared task on parsing morphologically rich languages.
 The previous page is available at <a class="reference external" href="http://www.spmrl.org/shared_task_old.html">http://www.spmrl.org/shared_task_old.html</a>
-(note: this webpage is in heavy editing, will be up to date before the worksop)</p>
+(note: this webpage is in heavy editing, will be up to date before the workshop)</p>
 <div class="section" id="goals">
 <h2>Goals</h2>
 <p>The primary goal of the shared task on parsing morphologically rich languages was to bring forward work on parsing morphologically ambiguous input in both dependency and constituency parsing, and to show the state of the art for MRLs. In the longer term,  we aim to provide streamlined data sets and  evaluation metrics, thus improving the comparability of cross linguistic work on parsing MRLs. The shared task featured
@@ -53,23 +53,15 @@ tracks in constituency parsing and in dependency parsing, in gold as well as in 
 <div class="section" id="data-set">
 <h2>Data Set</h2>
 <p>The participants were provided with data from 9 different languages (Arabic, Basque, French, German, Hebrew, Hungarian, Korean, Polish,Swedish). The data were available in Penn Treebank bracketing format, CoNLL-X format and optionally in TiGerXML.
-In order to ease cross-linguistic comparisons, the data set have also been released within a common size setting (ie, treebanks of 5000 sentences).</p>
+In order to ease cross-linguistic comparisons, the data set have also been released within a common size setting (ie, treebanks of 5000 sentences).
+All treebanks (dep. and const.) are aligned at the sentence, token and POS levels.</p>
 <p>The data set and the procedure to download them are available at</p>
 <p><a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php">http://dokufarm.phil.hhu.de/spmrl2013/doku.php</a></p>
 </div>
 <div class="section" id="metrics">
 <h2>Metrics</h2>
-</div>
 <div class="section" id="gold-tokens-scenarios">
-<h2>Gold Tokens Scenarios:</h2>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 43)</p>
-<p>Title underline too short.</p>
-<pre class="literal-block">
-Gold Tokens Scenarios:
-~~~~~~~~~~~~~~~~~~~~~
-</pre>
-</div>
+<h3>Gold Tokens Scenarios:</h3>
 <ul>
 <li><dl class="first docutils">
 <dt>Dependency Structure:</dt>
@@ -79,42 +71,57 @@ Gold Tokens Scenarios:
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Phrase Structures</dt>
-<dd><ul class="first last simple">
-<li>We used two metrics: Parseval (Evalb, (Black et al, 91) and LeafAncestor (Sampson and Babarczy, 2003). With a modified version (from Sancl 2012 (Petrov and Mc Donald, 2012) that penalises unparsed trees for the former and with an implementation from Wagner (2012) for the latter.</li>
+<li><p class="first">Phrase Structures</p>
+<blockquote>
+<ul>
+<li><p class="first">We used two metrics: Parseval (Evalb, (Black et al, 91) and LeafAncestor (Sampson and Babarczy, 2003). With a modified version (from Sancl 2012 (Petrov and Mc Donald, 2012) that penalises unparsed trees for the former and with an implementation from Wagner (2012) for the latter.</p>
+<blockquote>
+<ul class="simple">
 <li>Evalb spmrl : <a class="reference external" href="http://pauillac.inria.fr/~seddah/evalb_spmrl2013.tar.gz">http://pauillac.inria.fr/~seddah/evalb_spmrl2013.tar.gz</a> (please read the README file, we used the -X option)</li>
 <li>LeafAncestor: <a class="reference external" href="http://pauillac.inria.fr/~seddah/parse_la.py">http://pauillac.inria.fr/~seddah/parse_la.py</a>  (please read the disclaimer on top of the file)</li>
-<li>Note: as oppposed to the common usage in the parsing communities, all constituency results are given for sentences of all lenght and all tokens are evaluated (including punctuation tokens). For both Evalb and LeafAncestor, the labels {TOP, S1, ROOT, VROOT} are stripped off.</li>
 </ul>
-</dd>
-</dl>
+</blockquote>
 </li>
-<li><dl class="first docutils">
-<dt>Multi Word Expressions evaluation:</dt>
-<dd><ul class="first last simple">
-<li>The French data set contains MWEs annotated at the morpho syntactic level. We evaluated them for the dependency track only. (see wiki page <a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=shared_task_description">http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=shared_task_description</a> )</li>
-<li>MWE Evaluator: <a class="reference external" href="http://pauillac.inria.fr/~seddah/do_eval_dep_mwe.pl">http://pauillac.inria.fr/~seddah/do_eval_dep_mwe.pl</a></li>
+<li><p class="first">Note: as oppposed to the common usage in the parsing communities, all constituency results are given for sentences of all lenght and all tokens are evaluated (including punctuation tokens). For both Evalb and LeafAncestor, the labels {TOP, S1, ROOT, VROOT} are stripped off.</p>
+</li>
 </ul>
-</dd>
-</dl>
+</blockquote>
+</li>
+<li><p class="first">Multi Word Expressions evaluation:</p>
+<blockquote>
+<ul>
+<li><p class="first">The French data set contains MWEs annotated at the morpho syntactic level. We evaluated them for the dependency track only. (see wiki page <a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=shared_task_description">http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=shared_task_description</a> )</p>
+<blockquote>
+<ul class="simple">
+<li>MWE Evaluator (wrote by Marie Candito): <a class="reference external" href="http://pauillac.inria.fr/~seddah/do_eval_dep_mwe.pl">http://pauillac.inria.fr/~seddah/do_eval_dep_mwe.pl</a></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
 </li>
 </ul>
 </div>
 <div class="section" id="predicted-tokens-scenarios">
-<h2>Predicted Tokens Scenarios:</h2>
+<h3>Predicted Tokens Scenarios:</h3>
+<ul>
+<li><p class="first">Dependency  and Constituent Structures</p>
 <blockquote>
 <ul class="simple">
 <li>We used TedEval (Tsarfaty et al 2010,2011,2012) in its realistic framework (namely  a test file with its own mapping between predicted tokens and source tokens is evaluated upon a gold file and the gold token mapping). TedEval is available at <a class="reference external" href="http://www.tsarfaty.com/unipar/download.html">http://www.tsarfaty.com/unipar/download.html</a>.</li>
 <li>We developped a set of wrappers that use MaltParser's reprojectiver (Nivre &amp; Nilsson, 2005). Wrappers are available here <a class="reference external" href="http://pauillac.inria.fr/~seddah/TedWrappers_20131015.tar.gz">http://pauillac.inria.fr/~seddah/TedWrappers_20131015.tar.gz</a></li>
 </ul>
 </blockquote>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="results">
 <h2>Results</h2>
-</div>
+<p>Background information and extensive details on the evaluation scenarios and discussions on the results are provided on the Shared Task Overview paper (Seddah et al., 2013)
+<a class="reference external" href="http://aclweb.org/anthology//W/W13/W13-4917.pdf">http://aclweb.org/anthology//W/W13/W13-4917.pdf</a></p>
 <div class="section" id="dependency-parsing-track">
-<h2>Dependency Parsing Track</h2>
+<h3>Dependency Parsing Track</h3>
 <p>We used the same protocol as in Conll 2007 (Nivre et al, 2007) in two settings for 4 scenarios:</p>
 <p>Full train set size ⇒ with gold or predicted morphology (POS tag and features)
 5k sentences train set size ⇒ with gold or predicted morphology (POS tag and features).
@@ -123,29 +130,230 @@ Note that the predicted data were provided as baseline, participants were free t
 <li><a class="reference external" href="http://pauillac.inria.fr/~seddah/updated_official.spmrl_results.html">http://pauillac.inria.fr/~seddah/updated_official.spmrl_results.html</a></li>
 <li><a class="reference external" href="http://pauillac.inria.fr/~seddah/updated_official.csv">http://pauillac.inria.fr/~seddah/updated_official.csv</a></li>
 </ul>
-<p>All languages ranking</p>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>1st IMS-SZEGED-CIS
-<a href="#id3"><span class="problematic" id="id4">*</span></a>2nd Alpage-Dyalog
-<a href="#id5"><span class="problematic" id="id6">*</span></a>3rd MaltOptimier</p>
-<div class="system-message" id="id1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 85); <em><a href="#id2">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-<div class="system-message" id="id3">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 85); <em><a href="#id4">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-<div class="system-message" id="id5">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 85); <em><a href="#id6">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-<p>Constituent Parsing track
-Only IMS-SZEGED-CIS participated, we provide baseline results using the Berkeley Parser (Petrov et al, 2006, 2007)</p>
-<p><a href="#id7"><span class="problematic" id="id8">*</span></a><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_ptb-all.spmrl_results.html">http://pauillac.inria.fr/~seddah/official_ptb-all.spmrl_results.html</a>
-<a href="#id9"><span class="problematic" id="id10">*</span></a><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_ptb-all.csv">http://pauillac.inria.fr/~seddah/official_ptb-all.csv</a></p>
-<div class="system-message" id="id7">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 95); <em><a href="#id8">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-<div class="system-message" id="id9">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/yannick/sources/spmrl-website/content/sharedtask.rst</tt>, line 95); <em><a href="#id10">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
+<div class="section" id="all-languages-ranking-pred-full">
+<h4>All languages ranking (Pred/Full)</h4>
+<ul class="simple">
+<li>1st IMS-SZEGED-CIS</li>
+<li>2nd Alpage-Dyalog</li>
+<li>3rd MaltOptimier</li>
+</ul>
+<p>Breakdown by language (Pred/Full)</p>
+<ul>
+<li><p class="first">Arabic</p>
+<blockquote>
+<ul class="simple">
+<li>IMS-SZEGED-CIS</li>
+<li>CADIM</li>
+<li>MALTOPTIMIZER</li>
+</ul>
+</blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Basque</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>BASQUE TEAM</li>
+<li>MALTOPTIMIZER</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>French</dt>
+<dd><ul class="first last simple">
+<li>IGM-ALPAGE</li>
+<li>IMS-SZEGED-CIS</li>
+<li>BASQUE TEAM</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>German</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>BASQUE TEAM</li>
+<li>ALPAGE DYALOG</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Hebrew</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>ALPAGE DYALOG</li>
+<li>MALTOPTIMIZER</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Hungarian</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>BASQUE TEAM</li>
+<li>MALTOPTIMIZER</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Korean</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>MALTOPTIMIZER</li>
+<li>BASELINE MALT</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Polish</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>ALPAGE DYALOG</li>
+<li>MALTOPTIMIZER</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Swedish</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>BASQUE TEAM</li>
+<li>ALPAGE DYALOG</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>(Teams that used undisclosed unlabeled data are not part of the official ranking)</p>
+</div>
+</div>
+<div class="section" id="constituent-parsing-track">
+<h3>Constituent Parsing track</h3>
+<p>Only IMS-SZEGED-CIS participated, we provided baseline results using the Berkeley Parser in its default mode -- s/m: 5, OOV threshold: 10, default lexicon -- (Petrov et al, 2006, 2007) in two modes: with provided POS Tags (ie Tagged) and in Raw mode (the parser did its own pos tagging).</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Parseval scores:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_ptb-all.spmrl_results.html">http://pauillac.inria.fr/~seddah/official_ptb-all.spmrl_results.html</a></li>
+<li><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_ptb-all.csv">http://pauillac.inria.fr/~seddah/official_ptb-all.csv</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>LeafAncestor scores:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_leaf-all.spmrl_results.html">http://pauillac.inria.fr/~seddah/official_leaf-all.spmrl_results.html</a></li>
+<li><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_leaf-all.csv">http://pauillac.inria.fr/~seddah/official_leaf-all.csv</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="multi-word-expression-evaluation">
+<h3>Multi Word Expression Evaluation</h3>
+<ul class="simple">
+<li><a class="reference external" href="http://pauillac.inria.fr/~seddah/official-mwe.spmrl_results.html">http://pauillac.inria.fr/~seddah/official-mwe.spmrl_results.html</a></li>
+<li><a class="reference external" href="http://pauillac.inria.fr/~seddah/mwe_french_eval_conll.csv">http://pauillac.inria.fr/~seddah/mwe_french_eval_conll.csv</a></li>
+</ul>
+<p>MWE French ranking:</p>
+<ul class="simple">
+<li>IGM-ALPAGE</li>
+<li>IMS-SZEGED-CIS</li>
+<li>ALPAGE DYALOG</li>
+</ul>
+</div>
+<div class="section" id="non-gold-token-evaluation">
+<h3>Non Gold Token Evaluation</h3>
+<p>Arabic and Hebrew data set were provided with generated lattices (disambiguated and non-disambiguated for Hebrew, disambiguated only for Arabic – the data exist though, they should be made available at some points –)</p>
+<p>Results on the predicted tokens scenarios are evaluated using Tedeval 2.2 (Tsarfaty et al, 2011,2012) in two modes:</p>
+<p>A fully labeled mode (where edges, either from const. trees or dependencies, are decorated by their original labels). This mode allow for a full comparison between dependency parses produced on gold tokens and predicted tokens from the raw source text.
+An unlabeled mode which allows for easier cross-framework comparison (between const. and dep. parsers). In order to perform a fully labeled evaluation of a const. tree, each edges needs to bear a function label. Please see the overview paper for full details on the cross framework scenarios.</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Unlabeled mode</dt>
+<dd><ul class="first last">
+<li><p class="first"><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_tedeval-unlabel-70.spmrl_results.html">http://pauillac.inria.fr/~seddah/official_tedeval-unlabel-70.spmrl_results.html</a></p>
+</li>
+<li><dl class="first docutils">
+<dt>Arabic Ranking (full/pred)</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>CADIM</li>
+<li>MALTOPTIMER</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Hebrew Ranking (full/pred)</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>ALPAGE DYALOG</li>
+<li>MALTOPTIMIZER</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Labeled mode</dt>
+<dd><ul class="first last">
+<li><p class="first"><a class="reference external" href="http://pauillac.inria.fr/~seddah/official_tedeval-unlabel-70.spmrl_results.html">http://pauillac.inria.fr/~seddah/official_tedeval-unlabel-70.spmrl_results.html</a></p>
+</li>
+<li><dl class="first docutils">
+<dt>Arabic Ranking (full/pred)</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>CADIM</li>
+<li>MALTOPTIMER</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Hebrew Ranking (full/pred)</dt>
+<dd><ul class="first last simple">
+<li>IMS-SZEGED-CIS</li>
+<li>MALTOPTIMIZER</li>
+<li>ALPAGE DYALOG</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="getting-the-shared-task-data-set">
+<h2>Getting the Shared Task Data Set</h2>
+<p>All data but Arabic are freely available under the same conditions as during the shared task.
+Unless stated otherwise by their original licenses, any commercial exploitation of treebank data,
+derived parsing or tagging models are prohibited. Those data set are made available for
+reproductibility's sake and in the hope that this shared task data will provide inspiration
+for the design and evaluation of future parsing systems for these languages.</p>
+<p>The Arabic data we provided is based on the LDC's ATB 4.1, 3.1 and 3.2, then converted to
+both Columbia's CaTib Dependency Treebank (Habash &amp; Roth, 2009) and to Stanford's preprocessed version
+of the ATB (Green &amp; Manning, 2010).
+It is to be made available soon by the LDC via its usual channels. Contact us at <a class="reference external" href="mailto:spmrl.sharedtask&#64;gmail.com">spmrl.sharedtask&#64;gmail.com</a>
+if you absolutely need the data urgently, we'll made available our (huge) set of scripts we developed
+to create the data.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=how_to_obtain_licenses_for_the_shared_task_data">Licences</a>.</li>
+<li><a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=frequently_asked_questions#how_are_the_data_organized">How are the Data Organized</a>.</li>
+</ul>
 </div>
 <div class="section" id="shared-task-organizers">
 <h2>Shared task Organizers</h2>
@@ -153,6 +361,13 @@ Inline emphasis start-string without end-string.</div>
 <li>Sandra Kübler (Indiana University, US)</li>
 <li>Djamé Seddah (Université Paris Sorbonne &amp; INRIAs Alpage Project, France)</li>
 <li>Reut Tsarfaty (Weizmann Institute of Science, Israel)</li>
+</ul>
+</div>
+<div class="section" id="contact">
+<h2>Contact</h2>
+<ul class="simple">
+<li>mail: <a class="reference external" href="mailto:spmrl.sharedtask&#64;gmail.com">spmrl.sharedtask&#64;gmail.com</a></li>
+<li>Mailing list (still active, do not hesitate to ask questions):  <a class="reference external" href="https://sympa.inria.fr/sympa/arc/mrlp-sharedtask">https://sympa.inria.fr/sympa/arc/mrlp-sharedtask</a></li>
 </ul>
 </div>
 <div class="section" id="treebank-provider-teams">
@@ -250,7 +465,7 @@ Zhongqiang Huang, Joseph Le Roux, Grzegorz Chrupala.</p>
                 <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-05-12T00:00:00">
-                So 12 Mai 2013
+                Dim 12 mai 2013
         </abbr>
 
         <address class="vcard author">
