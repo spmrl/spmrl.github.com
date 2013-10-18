@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2013-10-10T00:00:00Z</updated><entry><title>Shared Task</title><link href="/spmrl2013-sharedtask.html" rel="alternate"></link><updated>2013-10-10T00:00:00Z</updated><author><name></name></author><id>tag:,2013-10-10:spmrl2013-sharedtask.html</id><summary type="html">&lt;!-- -*- coding:utf-8 -*- --&gt;
+&lt;p&gt;The fourth SPMRL workshop  hosted the first shared task on parsing morphologically rich languages.
+The previous page is available at &lt;a class="reference external" href="http://www.spmrl.org/shared_task_old.html"&gt;http://www.spmrl.org/shared_task_old.html&lt;/a&gt;
+(note: this webpage is in heavy editing, will be up to date before the workshop)&lt;/p&gt;
+&lt;div class="section" id="goals"&gt;
+&lt;h2&gt;Goals&lt;/h2&gt;
+&lt;p&gt;The primary goal of the shared task on parsing morphologically rich languages was to bring forward work on parsing morphologically ambiguous input in both dependency and constituency parsing, and to show the state of the art for MRLs. In the longer term,  we aim to provide streamlined data sets and  evaluation metrics, thus improving the comparability of cross linguistic work on parsing MRLs. The shared task featured
+tracks in constituency parsing and in dependency parsing, in gold as well as in realistic scenarios (the realistic scenario  has no gold tokenization, no gold part-of-speech tags and morphological features).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="data-set"&gt;
+&lt;h2&gt;Data Set&lt;/h2&gt;
+&lt;p&gt;The participants were provided with data from 9 different languages (Arabic, Basque, French, German, Hebrew, Hungarian, Korean, Polish,Swedish). The data were available in Penn Treebank bracketing format, CoNLL-X format and optionally in TiGerXML.
+In order to ease cross-linguistic comparisons, the data set have also been released within a common size setting (ie, treebanks of 5000 sentences).
+All treebanks (dep. and const.) are aligned at the sentence, token and POS levels.&lt;/p&gt;
+&lt;p&gt;The data set and the procedure to download them are available at&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php"&gt;http://dokufarm.phil.hhu.de/spmrl2013/doku.php&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="metrics"&gt;
+&lt;h2&gt;Metrics&lt;/h2&gt;
+&lt;div class="section" id="gold-tokens-scenarios"&gt;
+&lt;h3&gt;Gold Tokens Scenarios:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Dependency Structure:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;We mainly used Labeled Attachment Scores (Buchholz and Marsi, 2006) via CoNLL 2007's &lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/eval07.pl"&gt;eval07.pl (with slightly modified output)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Phrase Structures&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;We used two metrics: Parseval (Evalb, (Black et al, 91) and LeafAncestor (Sampson and Babarczy, 2003). With a modified version (from Sancl 2012 (Petrov and Mc Donald, 2012) that penalises unparsed trees for the former and with an implementation from Wagner (2012) for the latter.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Evalb spmrl : &lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/evalb_spmrl2013.tar.gz"&gt;evalb_spmrl2013.tar.gz&lt;/a&gt; (please read the README file, we used the -X option)&lt;/li&gt;
+&lt;li&gt;LeafAncestor: &lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/parse_la.py"&gt;parse_la.py&lt;/a&gt;  (please read the disclaimer on top of the file)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Note: as oppposed to the common usage in the parsing communities, all constituency results are given for sentences of all lenght and all tokens are evaluated (including punctuation tokens). For both Evalb and LeafAncestor, the labels {TOP, S1, ROOT, VROOT} are stripped off.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Multi Word Expressions evaluation:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;The French data set contains MWEs annotated at the morpho syntactic level. We evaluated them for the dependency track only. (see &lt;a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=shared_task_description"&gt;wiki page&lt;/a&gt; )&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;MWE Evaluator (written by Marie Candito): &lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/do_eval_dep_mwe.pl"&gt;do_eval_dep_mwe.pl&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="predicted-tokens-scenarios"&gt;
+&lt;h3&gt;Predicted Tokens Scenarios:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Dependency  and Constituent Structures&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;We used TedEval (Tsarfaty et al 2010,2011,2012) in its realistic framework (namely  a test file with its own mapping between predicted tokens and source tokens is evaluated upon a gold file and the gold token mapping). TedEval is available here: &lt;a class="reference external" href="http://www.tsarfaty.com/unipar/download.html"&gt;Tedeval 2.2&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We developped a set of wrappers that use MaltParser's reprojectiver (Nivre &amp;amp; Nilsson, 2005). Wrappers are available here: &lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/TedWrappers_20131015.tar.gz"&gt;TedWrappers_20131015.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="results"&gt;
+&lt;h2&gt;Results&lt;/h2&gt;
+&lt;p&gt;Background information and extensive details on the evaluation scenarios and discussions on the results are provided on the Shared Task Overview paper (Seddah et al., 2013)
+&lt;a class="reference external" href="http://aclweb.org/anthology//W/W13/W13-4917.pdf"&gt;http://aclweb.org/anthology//W/W13/W13-4917.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="dependency-parsing-track"&gt;
+&lt;h3&gt;Dependency Parsing Track&lt;/h3&gt;
+&lt;p&gt;We used the same protocol as in Conll 2007 (Nivre et al, 2007) in two settings for 4 scenarios:&lt;/p&gt;
+&lt;p&gt;Full train set size ⇒ with gold or predicted morphology (POS tag and features)
+5k sentences train set size ⇒ with gold or predicted morphology (POS tag and features).
+Note that the predicted data were provided as baseline, participants were free to use theirs. The French, Hebrew and Arabic predicted train sets have not been subjected to a cross fold jackniffing so participants were incited to do it (only a few did use their own predicted morphology though: Alpage-IGM and Alpage-Dyalog for French, Cadim for Arabic and IMS_SGZEDED_CIS for all languages.)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/updated_official.spmrl_results.html"&gt;web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/updated_official.csv"&gt;csv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="all-languages-ranking-pred-full"&gt;
+&lt;h4&gt;All languages ranking (Pred/Full)&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;1st IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;2nd Alpage-Dyalog&lt;/li&gt;
+&lt;li&gt;3rd MaltOptimier&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Breakdown by language (Pred/Full)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Arabic&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;CADIM&lt;/li&gt;
+&lt;li&gt;MALTOPTIMIZER&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Basque&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;BASQUE TEAM&lt;/li&gt;
+&lt;li&gt;MALTOPTIMIZER&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;French&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IGM-ALPAGE&lt;/li&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;BASQUE TEAM&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;German&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;BASQUE TEAM&lt;/li&gt;
+&lt;li&gt;ALPAGE DYALOG&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Hebrew&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;ALPAGE DYALOG&lt;/li&gt;
+&lt;li&gt;MALTOPTIMIZER&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Hungarian&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;BASQUE TEAM&lt;/li&gt;
+&lt;li&gt;MALTOPTIMIZER&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Korean&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;MALTOPTIMIZER&lt;/li&gt;
+&lt;li&gt;BASELINE MALT&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Polish&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;ALPAGE DYALOG&lt;/li&gt;
+&lt;li&gt;MALTOPTIMIZER&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Swedish&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;BASQUE TEAM&lt;/li&gt;
+&lt;li&gt;ALPAGE DYALOG&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(Teams that used undisclosed unlabeled data are not part of the official ranking)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="constituent-parsing-track"&gt;
+&lt;h3&gt;Constituent Parsing track&lt;/h3&gt;
+&lt;p&gt;Only IMS-SZEGED-CIS participated, we provided baseline results using the Berkeley Parser in its default mode -- s/m: 5, OOV threshold: 10, default lexicon -- (Petrov et al, 2006, 2007) in two modes: with provided POS Tags (ie Tagged) and in Raw mode (the parser did its own pos tagging).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Parseval scores:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/official_ptb-all.spmrl_results.html"&gt;parseval web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/official_ptb-all.csv"&gt;parseval csv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;LeafAncestor scores:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/official_leaf-all.spmrl_results.html"&gt;leaf web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/official_leaf-all.csv"&gt;leaf csv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="multi-word-expression-evaluation"&gt;
+&lt;h3&gt;Multi Word Expression Evaluation&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/official-mwe.spmrl_results.html"&gt;mwe web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/mwe_french_eval_conll.csv"&gt;mwe csv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MWE French ranking:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;IGM-ALPAGE&lt;/li&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;ALPAGE DYALOG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="non-gold-token-evaluation"&gt;
+&lt;h3&gt;Non Gold Token Evaluation&lt;/h3&gt;
+&lt;p&gt;Arabic and Hebrew data set were provided with generated lattices (disambiguated and non-disambiguated for Hebrew, disambiguated only for Arabic – the data exist though, they should be made available at some points –)&lt;/p&gt;
+&lt;p&gt;Results on the predicted tokens scenarios are evaluated using Tedeval 2.2 (Tsarfaty et al, 2011,2012) in two modes:&lt;/p&gt;
+&lt;p&gt;A fully labeled mode (where edges, either from const. trees or dependencies, are decorated by their original labels). This mode allow for a full comparison between dependency parses produced on gold tokens and predicted tokens from the raw source text.
+An unlabeled mode which allows for easier cross-framework comparison (between const. and dep. parsers). In order to perform a fully labeled evaluation of a const. tree, each edges needs to bear a function label. Please see the overview paper for full details on the cross framework scenarios.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Unlabeled mode ( &lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/official_tedeval-unlabel-70.spmrl_results.html"&gt;tedeval unlabeled (&amp;lt;70)&lt;/a&gt; )&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Arabic Ranking (full/pred)&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;CADIM&lt;/li&gt;
+&lt;li&gt;MALTOPTIMER&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Hebrew Ranking (full/pred)&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;ALPAGE DYALOG&lt;/li&gt;
+&lt;li&gt;MALTOPTIMIZER&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Labeled mode ( &lt;a class="reference external" href="http://pauillac.inria.fr/~seddah/official_tedeval-unlabel-70.spmrl_results.html"&gt;tedeval labeled (&amp;lt;70)&lt;/a&gt; )&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Arabic Ranking (full/pred)&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;CADIM&lt;/li&gt;
+&lt;li&gt;MALTOPTIMER&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Hebrew Ranking (full/pred)&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;IMS-SZEGED-CIS&lt;/li&gt;
+&lt;li&gt;MALTOPTIMIZER&lt;/li&gt;
+&lt;li&gt;ALPAGE DYALOG&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="getting-the-shared-task-data-set"&gt;
+&lt;h2&gt;Getting the Shared Task Data Set&lt;/h2&gt;
+&lt;p&gt;All data but Arabic are freely available under the same conditions as during the shared task.
+Unless stated otherwise by their original licenses, any commercial exploitation of treebank data,
+derived parsing or tagging models are prohibited. Those data set are made available for
+reproductibility's sake and in the hope that this shared task data will provide inspiration
+for the design and evaluation of future parsing systems for these languages.&lt;/p&gt;
+&lt;p&gt;The Arabic data we provided is based on the LDC's ATB 4.1, 3.1 and 3.2, then converted to
+both Columbia's CaTib Dependency Treebank (Habash &amp;amp; Roth, 2009) and to Stanford's preprocessed version
+of the ATB (Green &amp;amp; Manning, 2010).
+It is to be made available soon by the LDC via its usual channels. Contact us at &lt;a class="reference external" href="mailto:spmrl.sharedtask&amp;#64;gmail.com"&gt;spmrl.sharedtask&amp;#64;gmail.com&lt;/a&gt;
+if you absolutely need the data urgently, we'll made available our (huge) set of scripts we developed
+to create the data.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=how_to_obtain_licenses_for_the_shared_task_data"&gt;Licences&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://dokufarm.phil.hhu.de/spmrl2013/doku.php?id=frequently_asked_questions#how_are_the_data_organized"&gt;How are the Data Organized&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="shared-task-organizers"&gt;
+&lt;h2&gt;Shared task Organizers&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Sandra Kübler (Indiana University, US)&lt;/li&gt;
+&lt;li&gt;Djamé Seddah (Université Paris Sorbonne &amp;amp; INRIAs Alpage Project, France)&lt;/li&gt;
+&lt;li&gt;Reut Tsarfaty (Weizmann Institute of Science, Israel)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="contact"&gt;
+&lt;h2&gt;Contact&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;mail: &lt;a class="reference external" href="mailto:spmrl.sharedtask&amp;#64;gmail.com"&gt;spmrl.sharedtask&amp;#64;gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mailing list (still active, do not hesitate to ask questions):  &lt;a class="reference external" href="https://sympa.inria.fr/sympa/arc/mrlp-sharedtask"&gt;https://sympa.inria.fr/sympa/arc/mrlp-sharedtask&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="treebank-provider-teams"&gt;
+&lt;h2&gt;Treebank Provider Teams&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Coordination effort, Normalization, Alignment between Const. and Dep.:&lt;ul&gt;
+&lt;li&gt;Djamé Seddah, Reut Tsarfaty and Sandra Kübler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Arabic&lt;ul&gt;
+&lt;li&gt;Nizar Habash, Ryan Roth (Columbia University)
+&lt;em&gt;Dependencies from Catib's treebank and full predicted morphology data&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Spence Green (Stanford University)
+&lt;em&gt;Code to build Stanford-like Constituents trees&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Ann Bies, Seth Kullick, Mohammed Maamouri (the Linguistic Data Consortium)
+&lt;em&gt;Original data set&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Basque&lt;ul&gt;
+&lt;li&gt;Koldo Gojenola, Iakes Goenaga (University of the Basque Country)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;French&lt;ul&gt;
+&lt;li&gt;Marie Candito (Univ. Paris 7 &amp;amp; Alpage), Djamé Seddah (Univ. Paris Sorbonne &amp;amp; Alpage)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;German&lt;ul&gt;
+&lt;li&gt;Wolfgang Seeker (IMS), Wolfgang Maier (Univ. of Dusseldorf), Yannick Versley (Univ. of Tuebingen) &amp;amp; Ines Rehbein  (Postdam Univ.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hebrew&lt;ul&gt;
+&lt;li&gt;Yoav Goldberg (Ben Gurion Univ), Reut Tsarfaty (Weizmann Institute of Science)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hungarian&lt;ul&gt;
+&lt;li&gt;Richárd Farkas, Veronika Vincze (Univ. of Szeged)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Korean&lt;ul&gt;
+&lt;li&gt;Jinho D. Choi (IPsoft Inc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Polish&lt;ul&gt;
+&lt;li&gt;Adam Przepiorkowski, Marcin Woliński, Alina Wróblewska (Institute of Computer Science, Polish Academy of Sciences)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Swedish&lt;ul&gt;
+&lt;li&gt;Joakim Nivre (Uppsala Univ.), Marco Kuhlmann (Linköping University)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We thank the Linguistic Data Consortium for agreeing to release their current versions of the Arabic Treebank for this Shared Task.
+(Ann Bies, Denise Di Pierso, Seth Kullick, Mohammed Maamouri)&lt;/p&gt;
+&lt;p&gt;Special thanks to Ozlem Cetinoglu &amp;amp; Thomas Müller (IMS), Yuval Marton (Microsoft Inc.), Miguel Ballesteros (Univ. Pompeu Fabra)
+for helping us debugging the data set at many occasions!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="acknowledgements"&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;For their precious help preparing the SPMRL 2013 Shared Task and for
+allowing their data to be part of it, we warmly thank the Linguistic
+Data Consortium, the Knowledge Center for Processing Hebrew (MILA),
+the Ben Gurion University, Columbia University, Institute of Computer
+Science (Polish Academy of Sciences), Korea Advanced Institute of
+Science and Technology, University of the Basque Country, University
+of Lisbon, Uppsala University, University of Stuttgart, University of
+Szeged and University Paris Diderot (Paris 7).
+We are also very grateful to the Philosophical Faculty of the Heinrich-Heine
+Universität Düsseldorf for hosting the shared task data via their dokuwiki.&lt;/p&gt;
+&lt;p&gt;We take advantage of this page to warmly and publicly thank  once more all
+the people involved in this shared task preparation (original data
+set, scripting, website, institutionnal and moral support):&lt;/p&gt;
+&lt;p&gt;(no particular order) Marie Candito, Jennifer Foster, Yoav Goldberg,
+Ines Rehbein, Yannick Versley, Ann Bies, Denise Di Pierso, Seth
+Kullick, Mohammed Maamouri, Spence Green, Christopher Manning, Mona
+Diab, Nizar Habash, Yuval Marton, Owen Rambow, Ryan Roth, Jinho
+Choi, Key-Sun Choi, Koldo Gojenola, Iakes Goenaga, Richard Farkas,
+Veronika Vincze, Adam Przepiorkowski, Alina Wróblewska, Marcin
+Woliński, Anne Abeillé, Joseph van Genabith, Marco Kullman, Joakim
+Nivre, Ozlem Cetinoglu, Wolfgang Maier, Wolfgang Seeker, Khahil
+Sima'an, Harry Bunt, Alon Lavie, Benoit Sagot, Benoit Crabbé,
+Laurence Danlos, Eric de la Clergerie, James Henderson, Slav Petrov,
+Zhongqiang Huang, Joseph Le Roux, Grzegorz Chrupala.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="CfP"></category><category term="spmrl2013"></category></entry><entry><title>Call for Papers</title><link href="/spmrl2013.html" rel="alternate"></link><updated>2013-05-12T00:00:00Z</updated><author><name></name></author><id>tag:,2013-05-12:spmrl2013.html</id><summary type="html">&lt;!-- -*- coding:utf-8 -*- --&gt;
+&lt;div class="section" id="th-workshop-on-statistical-parsing-of-morphologically-rich-languages-spmrl-2013"&gt;
+&lt;h2&gt;4th Workshop on Statistical Parsing of Morphologically Rich Languages (SPMRL'2013)&lt;/h2&gt;
+&lt;p&gt;ENDORSED BY SIGPARSE&lt;/p&gt;
+&lt;p&gt;Co-located with EMNLP 2013, October 18 - 21 in Seattle, Washington&lt;/p&gt;
+&lt;p&gt;SPMRL 2013 will feature a shared task on parsing morphologically rich languages.&lt;/p&gt;
+&lt;p&gt;Join the Shared Task mailing list : &lt;a class="reference external" href="https://sympa.inria.fr/sympa/info/mrlp-sharedtask"&gt;https://sympa.inria.fr/sympa/info/mrlp-sharedtask&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="outline"&gt;
+&lt;h3&gt;Outline&lt;/h3&gt;
+&lt;p&gt;The SPMRL series of workshop provides a forum for research in parsing morphologically-rich languages, with the goal of identifying cross-cutting issues in the annotation and parsing methodology for such languages, which typically have more flexible word order and/or higher word-form variation than English.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-we-have-learned"&gt;
+&lt;h3&gt;What we have learned&lt;/h3&gt;
+&lt;p&gt;Past SPMRL installments have been host to successful identification of some problem areas and approaches that address these problems: in the presence of word order variation, more meaningful results can be reached through treebank transformations (Versley &amp;amp; Rehbein 2009; Tsarfaty &amp;amp; Sima'an 2010, Choi et al., 2012) or latent annotations (Petrov et al., 2006), the parallel use of constituency and dependency structures (Le Roux et al., 2012), as well as techniques to provide prior knowledge in the handling of unseen words (Candito &amp;amp; Seddah 2010, Rehbein 2011, Sigogne et al 2011; Anguiano &amp;amp; Candito 2012).&lt;/p&gt;
+&lt;p&gt;SPMRL has also been host to discussions on realistic and appropriate evaluation methods that can be applied in the face of morphological and/or segmentation ambiguities; these discussions have culminated in a shared task for parsing these morphologically-rich languages, which will be co-located with the workshop.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="areas-of-interest"&gt;
+&lt;h3&gt;Areas of interest&lt;/h3&gt;
+&lt;p&gt;The areas of interest of the fourth SPMRL workshop include, but are not limited to, the following list of topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;applying cutting-edge parsing techniques to new languages&lt;/li&gt;
+&lt;li&gt;strengths and weaknesses of current parsing techniques when applied to morphologically-rich languages&lt;/li&gt;
+&lt;li&gt;insights and techniques that are targeted at improving parsing quality for morphologically-rich languages&lt;/li&gt;
+&lt;li&gt;using insights from parsing and associated processing problems to motivate decisions in the creation of new syntactically annotated corpora&lt;/li&gt;
+&lt;li&gt;annotation and parsing of data from domains and genres that are not yet covered for many languages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="important-dates"&gt;
+&lt;h3&gt;Important Dates&lt;/h3&gt;
+&lt;p&gt;(NEW: Submission deadline has been moved from July 5th to July 29th)&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="53%" /&gt;
+&lt;col width="47%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Submission deadline&lt;/td&gt;
+&lt;td&gt;July 29, 2013&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Author Notification&lt;/td&gt;
+&lt;td&gt;August 25, 2013&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Camera ready copy&lt;/td&gt;
+&lt;td&gt;September 5, 2013&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Workshop&lt;/td&gt;
+&lt;td&gt;October 18, 2013&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-submit"&gt;
+&lt;h3&gt;How to Submit&lt;/h3&gt;
+&lt;p&gt;Authors are invited to submit &lt;em&gt;long papers&lt;/em&gt; (up to 9 pages + references)
+and &lt;em&gt;short papers&lt;/em&gt; (up to 5 pages + references). Long papers should
+describe unpublished, substantial and completed research. Short papers
+should be position papers, papers describing work in progress or
+short, focused contributions.&lt;/p&gt;
+&lt;p&gt;Submissions will be accepted until July, 29 , 2013, (11:59 p.m. PST) in PDF format via the &lt;a class="reference external" href="https://www.softconf.com/emnlp2013/SPMRL2013"&gt;START system&lt;/a&gt;
+and must be formatted using the &lt;a class="reference external" href="http://hum.csse.unimelb.edu.au/emnlp2013/files/naaclhlt2013.zip"&gt;NAACL 2013 stylefiles&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="shared-task"&gt;
+&lt;h4&gt;Shared Task&lt;/h4&gt;
+&lt;p&gt;The fourth SPMRL workshop will also host the first shared task on parsing morphologically rich languages (see &lt;a class="reference external" href="/spmrl2013-sharedtask.html"&gt;Shared Task&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="organizers"&gt;
+&lt;h3&gt;Organizers&lt;/h3&gt;
+&lt;div class="section" id="workshop"&gt;
+&lt;h4&gt;Workshop&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Yoav Goldberg (Bar Ilan University, Israel)&lt;/li&gt;
+&lt;li&gt;Yuval Marton (Microsoft Inc., US)&lt;/li&gt;
+&lt;li&gt;Ines Rehbein (Potsdam University, Germany)&lt;/li&gt;
+&lt;li&gt;Yannick Versley (Tübingen University, Germany)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h4&gt;Shared task&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Sandra Kübler (Indiana University, US)&lt;/li&gt;
+&lt;li&gt;Djamé Seddah (Université Paris Sorbonne &amp;amp; INRIAs Alpage Project, France)&lt;/li&gt;
+&lt;li&gt;Reut Tsarfaty (Uppsala University, Sweden)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="program-committee"&gt;
+&lt;h3&gt;Program committee&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Mohammed Attia (Dublin City University, Ireland)&lt;/li&gt;
+&lt;li&gt;Bernd Bohnet (University of Birmingham, UK)&lt;/li&gt;
+&lt;li&gt;Marie Candito (University of Paris 7, France)&lt;/li&gt;
+&lt;li&gt;Aoife Cahill (Educational Testing Service Inc., US)&lt;/li&gt;
+&lt;li&gt;Ozlem Cetinoglu (University of Stuttgart, Germany)&lt;/li&gt;
+&lt;li&gt;Jinho Choi (IPSoft Inc., US)&lt;/li&gt;
+&lt;li&gt;Grzegorz Chrupala (Tilburg University, Netherlands)&lt;/li&gt;
+&lt;li&gt;Benoit Crabbé (University of Paris 7, France)&lt;/li&gt;
+&lt;li&gt;Gülsen Cebiroglu Eryigit (Istanbul Technical University, Turkey)&lt;/li&gt;
+&lt;li&gt;Michael Elhadad (Ben Gurion University, Israel)&lt;/li&gt;
+&lt;li&gt;Richard Farkas (University of Szeged, Hungary)&lt;/li&gt;
+&lt;li&gt;Jennifer Foster (Dublin City University, Ireland)&lt;/li&gt;
+&lt;li&gt;Josef van Genabith (Dublin City University, Ireland)&lt;/li&gt;
+&lt;li&gt;Koldo Gojenola (University of the Basque Country, Spain)&lt;/li&gt;
+&lt;li&gt;Spence Green (Stanford University, US)&lt;/li&gt;
+&lt;li&gt;Samar Husain (Potsdam University, Germany)&lt;/li&gt;
+&lt;li&gt;Sandra Kübler (Indiana University, US)&lt;/li&gt;
+&lt;li&gt;Jonas Kuhn (University of Stuttgart, Germany)&lt;/li&gt;
+&lt;li&gt;Alberto Lavelli (FBK-irst, Italy)&lt;/li&gt;
+&lt;li&gt;Joseph Le Roux (Université Paris-Nord, France)&lt;/li&gt;
+&lt;li&gt;Wolfgang Maier (University of Düsseldorf, Germany)&lt;/li&gt;
+&lt;li&gt;Takuya Matsuzaki (University of Tokyo, Japan)&lt;/li&gt;
+&lt;li&gt;Joakim Nivre (Uppsala University, Sweden)&lt;/li&gt;
+&lt;li&gt;Kemal Oflazer (Carnegie Mellon University, Qatar)&lt;/li&gt;
+&lt;li&gt;Adam Przepiorkowski (ICS PAS, Poland)&lt;/li&gt;
+&lt;li&gt;Owen Rambow (Columbia University, US)&lt;/li&gt;
+&lt;li&gt;Kenji Sagae (University of Southern California, US)&lt;/li&gt;
+&lt;li&gt;Benoit Sagot (Inria Rocquencourt, France)&lt;/li&gt;
+&lt;li&gt;Djamé Seddah (Inria Rocquencourt, France)&lt;/li&gt;
+&lt;li&gt;Reut Tsarfaty (Uppsala University, Sweden)&lt;/li&gt;
+&lt;li&gt;Lamia Tounsi (Dublin City University, Ireland)&lt;/li&gt;
+&lt;li&gt;Daniel Zeman (Charles University, Czechia)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="endorsement"&gt;
+&lt;h3&gt;ENDORSEMENT&lt;/h3&gt;
+&lt;p&gt;This workshop is endorsed  by THE ACL SIGPARSE interest group.&lt;/p&gt;
+&lt;p&gt;For their precious help preparing the SPMRL 2013 Shared Task and for
+allowing their data to be part of it, we warmly thank the Linguistic
+Data Consortium, the Knowledge Center for Processing Hebrew (MILA),
+the Ben Gurion University, Columbia University, Institute of Computer
+Science (Polish Academy of Sciences), Korea Advanced Institute of
+Science and Technology, University of the Basque Country, University
+of Lisbon, Uppsala University, University of Stuttgart, University of
+Szeged and University Paris Diderot (Paris 7).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="CfP"></category><category term="spmrl2013"></category></entry></feed>
